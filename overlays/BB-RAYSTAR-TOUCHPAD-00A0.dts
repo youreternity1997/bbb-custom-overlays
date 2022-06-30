@@ -52,6 +52,7 @@
 			P9_27_pinmux { status = "disabled"; };	/* lcd: lcd_disp */
 
 			P9_42_pinmux { status = "disabled"; };	/* pwm: eCAP0_in_PWM2_out */
+			P9_23_pinmux { status = "disabled"; };  /* lcd: lcd power switch */
 
 			P9_15_pinmux { status = "disabled"; };	/* touch reset: gpio1_16 */
 			P9_16_pinmux { status = "disabled"; };	/* touch interrupt: gpio1_19 */
@@ -100,13 +101,14 @@
 					BONE_P8_28 (PIN_OUTPUT | MUX_MODE0) /* lcd: lcd_pclk.lcd_pclk */
 					BONE_P8_30 (PIN_OUTPUT | MUX_MODE0) /* lcd: lcd_ac_bias_en.lcd_ac_bias_en */
 					BONE_P9_27 (PIN_INPUT_PULLDOWN | MUX_MODE7) /* lcd: lcd disp */
+					BONE_P9_23 (PIN_OUTPUT_PULLUP | MUX_MODE7) /* lcd power switch */
 				>;
 			};
 
 			touch_reset_intr_pins: pinmux_touch_reset_intr_pins {
 				pinctrl-single,pins = <
-					BONE_P9_15 (PIN_INPUT_PULLDOWN | MUX_MODE7) /* */
-					BONE_P9_16 (PIN_INPUT_PULLDOWN | MUX_MODE7) /* */
+					BONE_P9_15 (PIN_OUTPUT_PULLUP | MUX_MODE7) /* */
+					BONE_P9_16 (PIN_INPUT_PULLUP | MUX_MODE7) /* */
 				>;
 			};
 		};
