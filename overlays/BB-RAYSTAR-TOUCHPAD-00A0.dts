@@ -155,7 +155,7 @@
 				pinctrl-0 = <&touch_reset_intr_pins>;
 				reg = <0x41>;
 				interrupt-parent = <&gpio1>;
-				interrupts = <19 8>;
+				interrupts = <19 2>;
 				reset-gpios = <&gpio1 16 GPIO_ACTIVE_LOW>;
 				ilitek,name = "ilitek_ts";
 				touchscreen-size-x = <480>;
