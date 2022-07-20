@@ -168,6 +168,10 @@
 				touchscreen-swapped-x-y;
 				*/
 			};
+			rtc@51 {
+				compatible = "nxp,pcf85263";
+				reg = <0x51>;
+			};
 		};
 	};
 
