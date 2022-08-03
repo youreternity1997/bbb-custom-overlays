@@ -5,7 +5,7 @@
 - #### Flash 4GB sdcard
 
 ```
-xz bone-debian-10.3-iot-armhf-2020-04-06-4gb.img.xz
+xz -d bone-debian-10.3-iot-armhf-2020-04-06-4gb.img.xz
 sudo dd if=bone-debian-10.3-iot-armhf-2020-04-06-4gb.img of=/dev/sdX bs=4096
 ```
 
