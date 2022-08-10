@@ -1,0 +1,12 @@
+diff --git a/api/screenlock.py b/api/screenlock.py
+index b870502..7725e6a 100644
+--- a/api/screenlock.py
++++ b/api/screenlock.py
+@@ -34,6 +34,6 @@ class ScreenLock:
+                     #print("456") 
+                     os.system('gnome-screensaver-command -d') # 結束鎖定螢幕
+                     self.status = 0 # 無鎖螢幕狀態
+-                time.sleep(0.1)
++            time.sleep(0.1)
+             old_switch_state = new_switch_state
+ #ScreenLock()            
