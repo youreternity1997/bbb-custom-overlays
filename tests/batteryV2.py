@@ -15,7 +15,7 @@ class BatteryV2:
     def setUp(self):
         # GPIO
         # https://adafruit-beaglebone-io-python.readthedocs.io/en/latest/GPIO.html
-        GPIO.setup(self.charge, GPIO.IN)
+        GPIO.setup(self.charge, GPIO.IN, GPIO.PUD_UP)
         GPIO.add_event_detect(self.charge, GPIO.FALLING)
         GPIO.add_event_callback(self.charge, callback=self.callback)
         
