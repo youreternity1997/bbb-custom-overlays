@@ -7,7 +7,7 @@ class BatteryV2:
         return GPIO.input(self.charge)
 
     def __init__(self, charge, adc, _callback):
-        # instance Variables
+        # Instance Variables
         self.charge = charge
         self.adc = adc
         self.callback = _callback
