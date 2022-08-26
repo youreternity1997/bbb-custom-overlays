@@ -3,8 +3,6 @@ import Adafruit_BBIO.ADC as ADC
 import time
 
 class BatteryV2:
-    voltage_level = [1.4, 1.48, 1.58, 1.68]
-    level = "power100"
     def isCharge(self):
         return GPIO.input(self.charge)
 
@@ -28,17 +26,16 @@ class BatteryV2:
     def voltage(self):
         return ADC.read(self.adc) * 1.8
 
-    def batteryLevel(self, voltage):
-        if voltage > self.voltage_level[-1]:
-            return "power100"
-        if voltage <= self.voltage_level[0]:
-            return "power0"
-        if voltage > self.voltage_level[2]:
-            return "power75"
-        if voltage > self.voltage_level[1]:
-            return "power50"
-        if voltage > self.voltage_level[0]:
-            return "power25"
-
 def charge_callback(channel):
     print("callback called for " + channel)
+
+b = BatteryV2("P9_30", "P9_40", charge_callback)
+b.setUp()
+
+while True:
+    if b.isCharge() == 0:
+       break
+    time.sleep(1)
+    print("voltage " + str(b.voltage()) )
+
+print("exit")
