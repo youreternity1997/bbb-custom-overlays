@@ -439,6 +439,7 @@ class BarPage(tk.Frame):
             print("channel " + channel)
             self.powerlabel.configure(image=self.master.images['charging'])
             self.powerlabel.image = self.master.images['charging']
+            b.level = 'charging'
         try:
             b = BatteryV2("P9_30", "P9_40", callback_BatteryCharge)
         except (TypeError, NameError, Exception) as exc:
@@ -450,7 +451,8 @@ class BarPage(tk.Frame):
             if b.isCharge() == 1:
                 print("volatge " + str(b.voltage()))
                 # input voltage
-                voltage = float(input("input voltage:"))
+                # voltage = float(input("input voltage:"))
+                voltage = b.voltage()
 
                 try:
                     level = b.batteryLevel(voltage)
