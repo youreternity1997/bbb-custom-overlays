@@ -44,7 +44,15 @@ debian@arm:~$ sudo hwclock -r -f /dev/rtc0
 
 
 
-### Sync Time TBD
+### NTP Time Synchronization
 
-timedatectl
-
+```
+root@beaglebone:/home/debian# timedatectl
+               Local time: Tue 2021-01-19 11:23:10 UTC
+           Universal time: Tue 2021-01-19 11:23:10 UTC
+                 RTC time: Tue 2021-01-19 11:23:10
+                Time zone: Etc/UTC (UTC, +0000)
+System clock synchronized: yes
+              NTP service: active
+          RTC in local TZ: no
+```
