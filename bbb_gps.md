@@ -8,7 +8,7 @@ uboot_overlay_addr1=/lib/firmware/BB-UART4-00A0.dtbo
 
 
 
-### (Option) Power on/off GPS
+### Power on/off GPS by command
 
 ```
 # power-on GPS
@@ -42,3 +42,12 @@ $GNGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99,1*33
 $GNGSA,A,1,,,,,,,,,,,,,99
 ```
 
+
+
+## Merge python adafruit_gps code
+
+Merge bbb-custom-overlays/tests/gps/DD.py
+
+Copy adafruit_gps.py "/home/debian/Drug_Detector/api/"
+
+Copy gps_fix.png and gps.png "/home/debian/Drug_Detector/images/icon/"
