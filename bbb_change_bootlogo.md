@@ -40,3 +40,16 @@ pnmnoraw logo480x242_224_02.ppm > logo480x242_ascii_224.ppm
 cp logo480x242_ascii_224.ppm "lcoal kernel patth"/drivers/video/logo/logo_linux_clut224.ppm
 ```
 
+
+### Copy .ppm to kernel then rebuild kernel
+
+```
+cp logo480x242_ascii_224.ppm "lcoal kernel patth"/drivers/video/logo/logo_linux_clut224.ppm
+```
+
+### Copy .ppm to kernel then rebuild kernel
+
+```
+cp logo480x242_ascii_224.ppm "lcoal kernel patth"/drivers/video/logo/logo_linux_clut224.ppm
+```
+
