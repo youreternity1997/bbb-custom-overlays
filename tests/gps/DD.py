@@ -495,8 +495,8 @@ class BarPage(tk.Frame):
                 # Update fix data
                 self.latitude = gps.latitude
                 self.longitude = gps.longitude
-                self.gpslabel.configure(image=self.master.images['gps_fix'])
-                self.gpslabel.image = self.master.images['gps_fix'] 
+                self.gpsLabel.configure(image=self.master.images['gps_fix'])
+                self.gpsLabel.image = self.master.images['gps_fix']
 
     def toggle(self):
         if self.toggleBtn.config('relief')[-1] == 'sunken':
