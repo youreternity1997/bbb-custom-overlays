@@ -11,9 +11,14 @@ sudo dd if=bone-debian-10.3-iot-armhf-2020-04-06-4gb.img of=/dev/sdX bs=4096 sta
 
 
 
-### (Option) BBB build from scratch
+### BBB build kernel and kernel modules from scratch
 
 * #### [Linux Kernel](https://forum.digikey.com/t/debian-getting-started-with-the-beaglebone-black/12967#install-kernel-and-root-file-system-13)
+
+  * [Set uname_r in /boot/uEnv.txt](https://forum.digikey.com/t/debian-getting-started-with-the-beaglebone-black/12967#set-uname_r-in-bootuenvtxt-15)
+  * [Copy Kernel Image](https://forum.digikey.com/t/debian-getting-started-with-the-beaglebone-black/12967#copy-kernel-image-16)
+  * [Copy Kernel Device Tree Binaries](https://forum.digikey.com/t/debian-getting-started-with-the-beaglebone-black/12967#copy-kernel-device-tree-binaries-17)
+  * [Copy Kernel Modules](https://forum.digikey.com/t/debian-getting-started-with-the-beaglebone-black/12967#copy-kernel-modules-18)
 
 * #### [Install Kernel](https://forum.digikey.com/t/debian-getting-started-with-the-beaglebone-black/12967#install-kernel-and-root-file-system-13)
 
