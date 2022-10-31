@@ -24,6 +24,22 @@ sudo dd if=bone-debian-10.3-iot-armhf-2020-04-06-4gb.img of=/dev/sdX bs=4096 sta
 
 
 
+### Add touchscreen driver, and rebuild the kernel and module
+
+```
+unzip touchscreen_ilitek_ts_i2c.zip -d <local kernel path>/ti_kernelbuildscripts/KERNEL
+cd <local kernel path>/ti_kernelbuildscripts>
+./tools/rebuild.sh
+
+Select -> Device Drivers
+	       -> Input Devices
+		      -> TouchScreen
+```
+
+![](/home/karlt/Pictures/kernel_ilitek.png)
+
+
+
 ### Install BBIO on Debian
 
 ```
