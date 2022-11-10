@@ -33,11 +33,25 @@ pnmnoraw logo480x242_224_02.ppm > logo480x242_ascii_224.ppm
 ```
 
 
-
 ### Copy .ppm to kernel then rebuild kernel
 ```
-cp logo480x242_ascii_224.ppm "lcoal kernel patth"/drivers/video/logo/logo_linux_clut224.ppm
+cp logo480x242_ascii_224.ppm "/home/ti-linux-kernel-dev/drivers/video/logo/logo_linux_clut224.ppm
 ```
+
+
+
+### Load the touch driver before rebuilding kernel
+```
+Add touchscreen driver, and rebuild the kernel and module
+unzip touchscreen_ilitek_ts_i2c.zip -d ./ti-linux-kernel-dev/ti_kernelbuildscripts/KERNEL
+cd ./ti-linux-kernel-dev/ti_kernelbuildscripts
+./tools/rebuild.sh
+
+Select -> Device Drivers
+	       -> Input Devices
+		      -> TouchScreen
+```
+
 
 
 ### Set uname_r in /boot/uEnv.txt
